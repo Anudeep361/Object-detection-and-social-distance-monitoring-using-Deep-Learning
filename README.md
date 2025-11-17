@@ -1,107 +1,106 @@
-Social Distance Detection Using Deep Learning
 
-Project Overview
-This project implements a real-time social distancing monitoring system using Deep Learning and Computer Vision techniques. The system leverages the YOLO V3 object detection architecture to detect humans in video frames and calculates the distance between them to identify potential social distancing violations.
 
-Features
 
-Real-time human detection using YOLO V3 and OpenCV.
+🚀 Project Overview
 
-Social distancing monitoring: flags individuals who are closer than a defined minimum distance.
+This project implements a real-time social distancing monitoring system using YOLO V3 and OpenCV. It detects humans in video feeds and calculates distances to flag potential social distancing violations—helping improve public safety in crowds.
 
-Visual alerts on video feed for violations.
+Key Goals:
 
-Works with live webcam feed or pre-recorded videos.
+Detect people in real-time ✅
 
-Optimized for real-world accuracy and performance.
+Monitor social distancing violations ⚠️
 
-Tech Stack
+Highlight violations visually in video feed 🎥
 
-Programming Language: Python 3.x
+🎯 Features
 
-Deep Learning Framework: TensorFlow / Keras
+🟢 Real-time human detection
 
-Computer Vision Library: OpenCV
+🟡 Social distancing alert system
 
-Object Detection Model: YOLO V3
+🔄 Works with webcam feed or video files
 
-Visualization: Matplotlib, OpenCV
+⚡ Optimized for high performance (30 FPS on GPU)
 
-Installation
+📊 Visual alerts for crowd management
 
-Clone the repository:
+🛠️ Tech Stack
+Component	Technology
+Language	Python 3.x 🐍
+Deep Learning	TensorFlow / Keras 🔮
+Computer Vision	OpenCV 📷
+Object Detection	YOLO V3 🎯
+Visualization	Matplotlib & OpenCV 📊
+⚙️ Installation
+
+Clone this repository:
 
 git clone https://github.com/Anudeep361/Social-Distance-Detection.git
 cd Social-Distance-Detection
 
 
-Create a virtual environment and activate it:
+Create and activate a virtual environment:
 
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 
 
 Install dependencies:
 
 pip install -r requirements.txt
 
-Usage
+🎬 Usage
 
-Run the model on a video file:
+Run on a video file:
 
 python detect_social_distance.py --input video.mp4 --output output.mp4
 
 
-Run the model on a webcam feed:
+Run on webcam feed:
 
 python detect_social_distance.py --webcam
 
 
-Parameters:
+Optional parameters:
 
---min-distance: Minimum social distance threshold in pixels (default: 50).
+--min-distance: Minimum distance threshold in pixels (default: 50)
 
---output: Output video file with social distancing violations highlighted.
+--output: Output video file with flagged violations
 
-How It Works
+🔍 How It Works
 
-Load the YOLO V3 pre-trained weights for human detection.
+Load YOLO V3 pre-trained weights for human detection
 
-Capture video frames from webcam or video file.
+Capture video frames from webcam or video
 
-Detect humans in each frame using YOLO V3.
+Detect humans in each frame using YOLO V3
 
-Calculate pairwise Euclidean distances between detected people.
+Compute pairwise distances between detected people
 
-Flag and highlight pairs of individuals violating the social distance threshold.
+Highlight individuals violating the distance threshold
 
-Display annotated video in real-time.
+Display annotated video in real-time
 
-Dataset
+📈 Results
 
-Pre-trained YOLO V3 weights for human detection.
+✅ 95% detection accuracy on 5,000+ test images
 
-Tested on custom videos and publicly available datasets for social distancing monitoring.
+⚡ Real-time processing at ~30 FPS on standard GPU
 
-Results
+💡 Future Improvements
 
-Achieved 95% detection accuracy on test dataset of 5,000+ images.
+Crowd density analytics 📊
 
-Real-time processing at ~30 FPS on standard GPU.
+Mask detection integration 😷
 
-Future Improvements
+Deployment on edge devices (Raspberry Pi, Jetson Nano) 🖥️
 
-Integrate with crowd density analytics.
+🔗 References
 
-Extend for mask detection and other COVID-19 safety measures.
+YOLO V3 Paper: arXiv:1804.02767
 
-Optimize model for deployment on edge devices like Raspberry Pi.
+OpenCV Documentation: opencv.org
 
-References
-
-YOLO V3 Paper: https://arxiv.org/abs/1804.02767
-
-OpenCV Documentation: https://opencv.org
-
-TensorFlow Documentation: https://www.tensorflow.org
+TensorFlow Documentation: tensorflow.org
